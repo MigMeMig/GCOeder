@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        * {
+            background-color: #ffffec
+        }
+
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 45%;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            width: auto\9; /* ie8 */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header >
+
+        <h1>Georg Christian von Oeder</h1>
+        <nav class="navbar navbar-expand-sm       navbar-nav flex-grow-1 " width: 90%>
+            <div class="container" text-align="center">
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Forside</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>*@
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" text-align="center">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><h4>Forside</h4></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Breve"><h4>Breve</h4></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Bio"><h4>Biografier</h4></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Ancestor"><h4>Stamtræer</h4></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr />
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - vonOeder - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

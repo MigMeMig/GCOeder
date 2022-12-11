@@ -1,0 +1,29 @@
+﻿
+
+<div class="row">
+    <div class="column" align="center">
+        <img src="@("/img/Bugge.jpg")" alt="Bugge" class="right" sizes="25%">
+   
+    <br />
+    </div>
+    <div class="column" align="center">
+        @{
+            //string line;
+            foreach (var item in ViewBag.bioBugge)
+            {
+                <p>@item</p>
+            }
+        }
+    </div>
+    <br />
+    <br />
+    <div class="row">
+
+        @{
+            //string line;
+            foreach (var item in ViewBag.Bugge)
+            {
+                <p>@item</p>
+            }
+        }
+        </div>

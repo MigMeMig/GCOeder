@@ -1,0 +1,34 @@
+﻿<head>
+
+
+<style>
+    .wrapimg {
+        float: left;
+        margin: 10px 10px 10px 10px;
+        border: 2px ;
+        width:20%;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapimg">
+        <img src="@(" /img/linne.jpg")"><br />
+        @{
+            foreach (var item in ViewBag.linne)
+            {
+                <p>@item</p>
+            }
+        }
+    </div>
+    <p>
+        @{
+            foreach (var item in ViewBag.lin_da)
+            {
+                <p>@item</p>
+            }
+        }
+    </p>
+</body>
+
+    
+    

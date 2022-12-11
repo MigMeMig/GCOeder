@@ -1,0 +1,63 @@
+﻿<h1>Biografier</h1>
+<br />
+
+<br />
+<div class="row">
+    <div class="column">
+        @*<div class="row" style="height:50%"
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="etLiv">
+                <h4>
+
+                    Georg Christian Oeder<br />
+                    Et liv - med flere end en indsats<br />
+                    <br />
+                    Af Ernst Willumsen
+
+                </h4>
+            </a>
+        </div>*@
+        <div class="row" style="height:50%">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Andenken">
+                <h4>
+
+                    Til minde om Oeder<br />
+
+                    <br />
+                    af
+                    Gerhard Anton von Halem<br /><br />
+                    Oversat af Ernst Willumsen
+
+                </h4>
+            </a>
+        </div>
+<br />
+        <div class="row" style="height:50%">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Andenken">
+                <h4>
+
+                    Til minde om Oeder<br />
+
+                    <br />
+                    af
+                    Gerhard Anton von Halem<br /><br />
+                    Oversat af Ernst Willumsen
+
+                </h4>
+            </a>
+        </div>
+    </div>
+    <div class="column">
+        <img src="@("/img/Leontodon Taraxacum.png")" style="width:70%"/>
+        <br />
+        @{
+            //string line;
+            foreach (var item in ViewBag.mælk)
+            {
+                <p>@item</p>
+            }
+        }
+
+
+    </div>
+</div>
+
