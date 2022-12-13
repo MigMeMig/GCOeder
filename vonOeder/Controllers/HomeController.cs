@@ -23,15 +23,15 @@ namespace vonOeder.Controllers
 
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("mysession", "mySessionValue");
-            string sessionId = HttpContext.Session.Id;
+            //HttpContext.Session.SetString("mysession", "mySessionValue");
+            //string sessionId = HttpContext.Session.Id;
 
-            _context.User.Add(new User
-            {
-                UserId = sessionId,
-                DT=DateTime.Now
-            });
-            await _context.SaveChangesAsync();
+            //_context.User.Add(new User
+            //{
+            //    UserId = sessionId,
+            //    DT=DateTime.Now
+            //});
+            //await _context.SaveChangesAsync();
             return View();
         }
         public IActionResult Bio()
