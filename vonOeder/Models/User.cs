@@ -9,6 +9,7 @@ namespace vonOeder.Models
     public class User
     {
         [Key]
+        public int ID { get; set; }
         public string UserId { get; set; }
         public DateTime DT { get; set; }
 
