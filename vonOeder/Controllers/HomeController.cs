@@ -25,11 +25,11 @@ namespace vonOeder.Controllers
         {
             HttpContext.Session.SetString("mysession", "mySessionValue");
             string sessionId = HttpContext.Session.Id;
-
+            var dati = DateTime.Now;
             _context.User.Add(new User
             {
                 UserId = sessionId,
-                DT = DateTime.Now
+                DT = new DateTime(dati.Year, dati.Month, dati.Day, dati.Hour, dati.Minute, 0)
             });
             await _context.SaveChangesAsync();
             return View();
@@ -138,6 +138,7 @@ namespace vonOeder.Controllers
             while ((line = file.ReadLine()) != null)
             {
                 fileLines.Add(line);
+
             }
             return fileLines;
         }
